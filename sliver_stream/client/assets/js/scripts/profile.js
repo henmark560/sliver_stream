@@ -22,7 +22,13 @@ const username = localStorage.getItem("username");
     function displayUserData(res) {
       if (username) {
         const data = JSON.parse(res.data)
-        console.log(data);
+        console.log(data)
+        const image = document.getElementById('profileImage');
+        if (data.image) {
+          image.src = data.image;
+        } else {
+          image.src = 'assets/img/profile.jpg';
+        }
         document.getElementById("user").innerText = data.username;
         document.getElementById("email").innerText = data.email;
         document.getElementById("mobile").innerText = data.mobile;

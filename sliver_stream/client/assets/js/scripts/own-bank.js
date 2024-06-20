@@ -137,7 +137,7 @@ document.getElementById('make_transfer').addEventListener('submit', function(eve
           .then(data => {
             const tx_ref = generateRandomString()
             const date = new Date()
-            document.getElementById("tx_amount").innerText = `$${amount}.00`;
+            document.getElementById("tx_amount").innerText = `$${amount.toLocaleString()}.00`;
             document.getElementById("tx_ref").innerText = `Session ID: ${tx_ref}`;
             document.getElementById("tx_from").innerText = `Transfer from: ${username}(${account_number_of_sender})`;
             document.getElementById("tx_to").innerText = `Transfer to: ${receiver_name}(${account})`;

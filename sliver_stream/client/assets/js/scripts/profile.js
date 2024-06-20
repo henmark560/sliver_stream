@@ -27,7 +27,7 @@ const username = localStorage.getItem("username");
         document.getElementById("email").innerText = data.email;
         document.getElementById("mobile").innerText = data.mobile;
         document.getElementById("country").innerText = data.country;
-        document.getElementById("acc").innerText = data.account_num;
+        document.getElementById("acc").innerText = data.acc_num;
       } else {
         // Redirect to the login.html page if the user is not logged in
         window.location.href = "login.html";

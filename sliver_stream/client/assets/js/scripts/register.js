@@ -15,18 +15,20 @@ document.getElementById('register').addEventListener('submit', function(event) {
     console.log("photo : ",photo)
     const formData = new FormData(this);
 
+   
+    // Disable the submit button
+
     register_btn.disabled = true;
 
     // Simulated endpoint for login (replace this with your actual endpoint)
+    // const loginEndpoint = 'http://127.0.0.1:8000';
+
     const loginEndpoint = 'https://sliver-stream.onrender.com';
-   
+
     
     // Simulated login request
     fetch(`${loginEndpoint}/register`, {
       method: 'POST',
-      headers: {
-        "Content-Type": "application/json",
-      },
       body: formData
     })
     .then(response => {
@@ -47,7 +49,7 @@ document.getElementById('register').addEventListener('submit', function(event) {
       console.log('Login successful:', data);
       // Store the authentication status in localStorage
       localStorage.setItem("hasRegistered", "true");
-      localStorage.setItem("username", formData.get('username'));
+      localStorage.setItem("username", formData.get('username').trim());
 
         // Redirect to the dashboard upon successful login
       window.location.href = 'login.html';

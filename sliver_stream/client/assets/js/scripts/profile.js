@@ -22,6 +22,7 @@ const username = localStorage.getItem("username");
     function displayUserData(res) {
       if (username) {
         const data = JSON.parse(res.data)
+        console.log(data);
         document.getElementById("user").innerText = data.username;
         document.getElementById("email").innerText = data.email;
         document.getElementById("mobile").innerText = data.mobile;

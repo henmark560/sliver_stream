@@ -247,7 +247,7 @@
             <div class="col-lg-4 col-sm-6 order-lg-1 order-1">
                 <div class="footer-widget">
                     <h3 class="footer-widget__title">About Us</h3>
-                    <p>Sliver Stream Bank is a complete e-Banking system. We have account-holders from almost all over the world. . Our system is secure and robust. You may feel safe about your deposited funds.</p>
+                    <p>Sliver Stream is a complete e-Banking system. We have account-holders from almost all over the world. . Our system is secure and robust. You may feel safe about your deposited funds.</p>
                     <ul class="social-media-links d-flex align-items-center mt-3">
                                                     <li>
                                 <a href="https://bd.linkedin.com/" target="_blank">
@@ -407,7 +407,7 @@
                                     <input class="bank-name form--control" class="form--control" type="text" readonly>
                                 </div>
                                 <div class="form-group">
-                                    <label class="required fw-bold">Recipient</label>
+                                    <label class="required fw-bold">Account Number</label>
                                     <input class="short-name form--control" class="form--control" type="text" name="addr" id="addr" required>
                                     <span class="caption" id="result" ></span>
                                 </div>
@@ -465,13 +465,13 @@
 
 
 
-
+<!-- 
     <div class="overlay" id="overlay"></div>
     <div class="man-modal" id="modal">
         <img src="assets/img/hoobank.svg" alt="Logo" class="logo">
         <h2>Transaction Successful</h2>
         <button onclick="hideModal()">Close</button>
-    </div>
+    </div> -->
 
 
 
@@ -479,6 +479,57 @@
 
 
 
+    <div class="overlay" id="overlay" ></div>
+<div class="man-modal" id="modal">
+    <img src="assets/img/hoobank.svg" alt="Logo" class="logo" style="
+        width: 100px;
+        margin-bottom: 20px;
+    ">
+    <h2 style="
+        font-size: 24px;
+        color: #333;
+        margin-bottom: 15px;
+    ">TRANSACTION SUCCESFULL</h2>
+    <div id="tx_amount" style="
+        font-size: 20px;
+        color: #333;
+        margin-bottom: 10px;
+    "></div>
+    <div id="tx_ref" style="
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+    "></div>
+    <div id="tx_from" style="
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+    "></div>
+    <div id="tx_to" style="
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+    "></div>
+    <div id="tx_date" style="
+        font-size: 16px;
+        color: #666;
+        margin-bottom: 10px;
+    "></div>
+    <div id="tx_status" style="
+        font-size: 16px;
+        color: #4CAF50;
+        margin-bottom: 20px;
+    ">Status: Completed</div>
+    <button onclick="hideModal()" style="
+        background-color: #4CAF50;
+        color: white;
+        border: none;
+        padding: 10px 20px;
+        font-size: 16px;
+        border-radius: 5px;
+        cursor: pointer;
+    ">Close</button>
+</div>
 
 
 
